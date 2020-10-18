@@ -1,0 +1,52 @@
+<mvc:View
+	controllerName="app/Edit"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+
+<App id="edit">
+    
+<Page title="User View">
+  <content>
+    <Table id="idProductsTable" noDataText="No data" items="{/}">
+      <columns>
+	  	<Column>
+          <Text text="ID" />
+        </Column>
+
+        <Column>
+          <Text text="Name" />
+        </Column>
+
+        <Column>
+          <Text text="Age" />
+        </Column>
+
+		<Column>
+          <Text text="   " />
+        </Column>
+
+      </columns>
+
+      <items>
+        <ColumnListItem >
+          <cells>
+		        <Text id="id2" text="{Id}"></Text>
+            <Input id="name2" value="{Name}"></Input>
+            <Input id="age2" value="{Age}"></Input>
+			      <Button text="Edit" app:data="{Id},{Name},{Age}" press="onPress" ariaDescribedBy="defaultButtonDescription genericButtonDescription"></Button>
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+    <Button text="Back" press="goBack" ariaDescribedBy="defaultButtonDescription genericButtonDescription"></Button>
+  </content>  
+</Page>
+</App>
+
+</mvc:View>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quickstart Tutorial</title>
+	<script id="sap-ui-bootstrap"
+		src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_belize"
+		data-sap-ui-libs="sap.m, sap.ui.layout, sap.tnt,sap.ui.commons,sap.ui.table"
+		data-sap-ui-resourceroots='{"app": "./"}'
+		data-sap-ui-onInit="module:app/index"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-bindingSyntax="complex"
+		data-sap-ui-async="true">
+	</script>
+	<!-- Application launch configuration -->
+	<script>
+
+		sap.ui.getCore().attachInit(function() {
+			new sap.m.App ({
+				pages: [
+					new sap.m.Page({
+						enableScrolling : false,
+						showHeader : false,
+						showNavButton: true,
+						content: [ new sap.ui.core.ComponentContainer({
+							name : "app"
+						})]
+					})
+				]
+			}).placeAt("content");
+		});
+
+	</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body class="sapUiBody" id="content">
+ 
+</body>
+</html>
